@@ -1,0 +1,2 @@
+<script setup lang="ts">defineProps<{ categories:string[], modelValue:string }>(); const emit=defineEmits<{ 'update:modelValue':[value:string] }>()</script>
+<template><div class="filters"><p>Explore by material</p><div class="filter-options" role="group" aria-label="Filter products by material"><button v-for="category in categories" :key="category" type="button" :class="{active:modelValue===category}" :aria-pressed="modelValue===category" @click="emit('update:modelValue',category)">{{ category }}</button></div></div></template>

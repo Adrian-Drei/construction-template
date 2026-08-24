@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://motionconstruction.ph/</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://motionconstruction.ph/images/home-hero-v2.webp</image:loc><image:title>Premium fluted wall panels by Motion Construction PH</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://motionconstruction.ph/products</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://motionconstruction.ph/images/products-hero.webp</image:loc><image:title>Motion Construction PH architectural finish collection</image:title></image:image>
+  </url>
+</urlset>

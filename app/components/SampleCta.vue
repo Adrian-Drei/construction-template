@@ -1,0 +1,1 @@
+<template><section class="sample-cta" aria-labelledby="sample-heading"><div class="sample-inner shell"><h2 id="sample-heading">Request a sample</h2><p>See the quality up close.<br>We’ll send it to you.</p><a href="https://www.instagram.com/motionconstruction.ph/" target="_blank" rel="noopener">Request a sample <span aria-hidden="true">→</span></a></div></section></template>
