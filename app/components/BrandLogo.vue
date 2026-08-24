@@ -1,1 +1,1 @@
-<template><NuxtLink class="brand" to="/" aria-label="Motion Construction home"><svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M3 15 22 3v9L11 19v22H3V15Zm12 6 13-8v28h-8V27l-5 3v-9Zm17-11 9-6v37h-9V10Z" /></svg><span>Motion<br>Construction</span></NuxtLink></template>
+<template><NuxtLink class="brand" to="/" aria-label="Buildstone Construction home"><span class="brand-mark" aria-hidden="true">BC</span><span class="brand-name"><strong>BUILDSTONE</strong><small>CONSTRUCTION</small></span></NuxtLink></template>

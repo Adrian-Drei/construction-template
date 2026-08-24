@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const siteUrl='https://motionconstruction.ph'
+const siteUrl='https://example.com'
 const title='Wall Panels, Flooring, Cladding & Mouldings'
-const description='Explore premium WPC wall panels, SPC stone flooring, outdoor cladding, flexible panels, PU stone, and PS mouldings from Motion Construction PH.'
-useSeoMeta({title,description,robots:'index, follow, max-image-preview:large',ogTitle:`${title} | Motion Construction PH`,ogDescription:description,ogType:'website',ogUrl:`${siteUrl}/products`,ogImage:`${siteUrl}/images/products-hero.webp`,ogImageAlt:'Architectural finish samples from Motion Construction PH',twitterCard:'summary_large_image',twitterTitle:`${title} | Motion Construction PH`,twitterDescription:description,twitterImage:`${siteUrl}/images/products-hero.webp`})
+const description='Explore premium WPC wall panels, SPC stone flooring, outdoor cladding, flexible panels, PU stone, and PS mouldings from Buildstone Construction.'
+useSeoMeta({title,description,robots:'index, follow, max-image-preview:large',ogTitle:`${title} | Buildstone Construction`,ogDescription:description,ogType:'website',ogUrl:`${siteUrl}/products`,ogImage:`${siteUrl}/images/products-hero.webp`,ogImageAlt:'Architectural finish samples from Buildstone Construction',twitterCard:'summary_large_image',twitterTitle:`${title} | Buildstone Construction`,twitterDescription:description,twitterImage:`${siteUrl}/images/products-hero.webp`})
 const categories = ["All Materials", "Wall Panels", "Flooring", "Cladding", "Mouldings"]
 const activeCategory = ref("All Materials")
 const products = [
@@ -14,14 +14,14 @@ const products = [
   { name: "PS Mouldings", category: "Mouldings", image: "/images/ps-mouldings.webp", alt: "White PS wall mouldings in a bright classical modern room", description: "Clean lines and timeless details for every space.", finishes: ["#f4f2ec", "#e4e0d8", "#dfc39b"] },
 ]
 const visibleProducts = computed(() => activeCategory.value === "All Materials" ? products : products.filter(p => p.category === activeCategory.value))
-useHead({link:[{rel:'canonical',href:`${siteUrl}/products`}],script:[{type:'application/ld+json',innerHTML:JSON.stringify({'@context':'https://schema.org','@type':'CollectionPage',name:title,description,url:`${siteUrl}/products`,mainEntity:{'@type':'ItemList',numberOfItems:products.length,itemListElement:products.map((product,index)=>({'@type':'ListItem',position:index+1,item:{'@type':'Product',name:product.name,description:product.description,image:`${siteUrl}${product.image}`,brand:{'@type':'Brand',name:'Motion Construction PH'},category:product.category,url:`${siteUrl}/products#catalog`}}))}})}]})
+useHead({link:[{rel:'canonical',href:`${siteUrl}/products`}],script:[{type:'application/ld+json',innerHTML:JSON.stringify({'@context':'https://schema.org','@type':'CollectionPage',name:title,description,url:`${siteUrl}/products`,mainEntity:{'@type':'ItemList',numberOfItems:products.length,itemListElement:products.map((product,index)=>({'@type':'ListItem',position:index+1,item:{'@type':'Product',name:product.name,description:product.description,image:`${siteUrl}${product.image}`,brand:{'@type':'Brand',name:'Buildstone Construction'},category:product.category,url:`${siteUrl}/products#catalog`}}))}})}]})
 </script>
 <template>
   <div>
     <SiteHeader />
     <main>
       <section class="hero" aria-labelledby="products-title">
-        <div class="hero-copy shell"><p class="eyebrow">Product collection</p><h1 id="products-title">Finishes made<br>for real spaces<span>.</span></h1><div class="short-rule"/><p class="hero-description">Carefully selected materials and finishes—crafted for beauty, built for performance, and designed to elevate every space.</p></div>
+        <div class="hero-copy shell"><p class="eyebrow">Product collection</p><h1 id="products-title">Finishes made<br>for real spaces<span>.</span></h1><div class="short-rule"></div><p class="hero-description">Carefully selected materials and finishes—crafted for beauty, built for performance, and designed to elevate every space.</p></div>
         <div class="hero-image-wrap"><img :src="'/images/products-hero.webp'" alt="Fluted wood, stone, oak, charcoal panel and white moulding material samples" width="1536" height="1152" fetchpriority="high"></div>
       </section>
       <section id="catalog" class="catalog shell" aria-labelledby="catalog-title"><h2 id="catalog-title" class="sr-only">Product catalog</h2><ProductFilters v-model="activeCategory" :categories="categories" /><TransitionGroup name="product-list" tag="div" class="product-grid"><ProductCard v-for="product in visibleProducts" :key="product.name" :product="product" /></TransitionGroup></section>

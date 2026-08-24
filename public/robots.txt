@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://motionconstruction.ph/sitemap.xml
+Sitemap: https://example.com/sitemap.xml
